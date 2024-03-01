@@ -18,7 +18,6 @@ To install the dependencies:
 # npm
 npm install
 
-
 ## Development Server
 
 Start the development server on http://localhost:3000
@@ -41,4 +40,4 @@ Locally preview production build:
 npm start
 ```
 
-# nuxt3
+# nuxt3 with UI pro

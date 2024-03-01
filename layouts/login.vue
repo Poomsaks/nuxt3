@@ -3,8 +3,10 @@
 <template>
   <div>
     <slot />
-    <p>
-      <strong> {{ $t("copyright") }} </strong>
-    </p>
+    <UFooter>
+      <template #center>
+        {{ $t("copyright") }}
+      </template>
+    </UFooter>
   </div>
 </template>
