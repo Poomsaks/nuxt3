@@ -4,7 +4,7 @@ export default {
   lanuage: 'English',
   home: 'Home',
   welcome: 'Welcome',
-  haveAccount: 'Don\'t have an account?',
+  haveAccount: "Don't have an account?",
   agreement: 'By signing in, you agree to our',
   termsOfService: 'Terms of Service',
   continueSSO: 'Continue with SSO',

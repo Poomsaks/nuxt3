@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
-
+definePageMeta({
+  middleware: 'auth'
+})
 const fileRef = ref<{ input: HTMLInputElement }>()
 const isDeleteAccountModalOpen = ref(false)
 
@@ -208,7 +210,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
           color="red"
           label="Delete account"
           size="md"
-          @click="isDeleteAccountModalOpen = true"
+          @click="isDeleteAccountModalOpen.value = true"
         />
       </div>
     </UDashboardSection>

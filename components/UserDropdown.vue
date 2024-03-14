@@ -1,8 +1,9 @@
-<script setup lang="ts">
+<!-- components/UserDropdown.vue -->
+<script setup lang="js">
 const { isHelpSlideoverOpen } = useDashboard()
 const { isDashboardSearchModalOpen } = useUIState()
 const { metaSymbol } = useShortcuts()
-
+const { $keycloak } = useNuxtApp()
 const items = computed(() => [
   [
     {
@@ -55,7 +56,11 @@ const items = computed(() => [
   [
     {
       label: 'Sign out',
-      icon: 'i-heroicons-arrow-left-on-rectangle'
+      icon: 'i-heroicons-arrow-left-on-rectangle',
+      to: '/',
+      click: () => {
+        $keycloak.logout()
+      }
     }
   ]
 ])

@@ -3,12 +3,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   devServer: {
     host: '0.0.0.0',
-    port: 3000
+    port: 3002
   },
   runtimeConfig: {
     // Public runtime config
     public: {
-      apiUrl: process.env.API_URL
+      apiUrl: process.env.API_URL,
+      keycloakUrl: process.env.KEYCLOAK_ISSUER,
+      keycloakRealm: process.env.KEYCLOAK_REALM,
+      keycloakClientId: process.env.KEYCLOAK_ID
     },
     // Private runtime config (server side only)
     private: {
@@ -23,10 +26,12 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
     '@nuxt/ui',
-    '@sidebase/nuxt-auth',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss'
   ],
+  // plugins: [
+  //   '~/plugins/keycloak.js'
+  // ],
   eslint: {
     fix: true // Make sure this is set to true
   },
@@ -52,21 +57,26 @@ export default defineNuxtConfig({
     }
   },
   i18n: {
-    vueI18n: './i18n.config.ts' // if you are using custom path, default
-  },
-  auth: {
-    baseURL: 'https://idp-dev.pointit.co.th:8443',
-    provider: {
-      type: 'refresh',
-      endpoints: {
-        signIn: { path: '/login', method: 'post' },
-        signOut: { path: '/logout', method: 'post' },
-        signUp: { path: '/register', method: 'post' },
-        getSession: { path: '/session', method: 'get' },
-        refresh: { path: '/refresh', method: 'post' }
-      },
-      token: { signInResponseTokenPointer: '/token' },
-      refreshToken: { signInResponseRefreshTokenPointer: '/refreshToken' }
-    }
+    vueI18n: '~/i18n.config.ts' // if you are using custom path, default
   }
+  // auth: {
+  //   // กำหนด strategies สำหรับ Keycloak
+  //   strategies: {
+  //     keycloak: {
+  //       scheme: 'oauth2',
+  //       endpoints: {
+  //         authorization: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/auth',
+  //         token: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/token',
+  //         userInfo: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/userinfo',
+  //         logout: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/logout?redirect_uri=' + encodeURIComponent('https://bma-dev.pointit.co.th')
+  //       },
+  //       clientId: 'nuxtjs3',
+  //       scope: ['openid', 'profile', 'email'],
+  //       responseType: 'code',
+  //       grantType: 'authorization_code',
+  //       redirectUri: 'https://bma-dev.pointit.co.th',
+  //       logoutRedirectUri: 'https://bma-dev.pointit.co.th/live'
+  //     }
+  //   }
+  // }
 })

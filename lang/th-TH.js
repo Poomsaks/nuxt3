@@ -1,4 +1,5 @@
 export default {
+  // Home
   system: 'ระบบบริการจัดการ',
   lanuage: 'ภาษาไทย',
   home: 'หน้าหนัก',

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+// import { sub } from 'date-fns'
+// import type { Period, Range } from '~/types'
 definePageMeta({
   middleware: ['auth']
 })
@@ -55,12 +56,21 @@ const items = [
           </UDropdown>
         </template>
       </UDashboardNavbar>
-      <!-- <UContainer class="iframe-container"> -->
+
+      <UDashboardToolbar>
+        <template #left>
+          <!-- ~/components/live/dateRangePicker.vue -->
+          <!-- <LiveDateRangePicker v-model="range" class="-ml-2.5" /> -->
+
+          <!-- ~/components/live/periodSelect.vue -->
+          <!-- <LivePeriodSelect v-model="period" :range="range" /> -->
+        </template>
+      </UDashboardToolbar>
       <UContainer>
         <iframe
           class="responsive-iframe"
-          src="https://bma-citylaw.pointit.co.th"
-          title="Live"
+          src="https://messaging.pointit.co.th"
+          title="Messaging"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -83,14 +93,6 @@ const items = [
 </template>
 
 <style scoped>
-/* ตั้งค่า container ให้มีอัตราส่วน 16:9 */
-.iframe-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
 /* ทำให้ iframe มีขนาดเต็ม container และยืดหยุ่นได้ */
   .responsive-iframe {
     position: absolute;
