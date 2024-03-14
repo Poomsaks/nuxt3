@@ -1,4 +1,10 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "." // ตั้งค่านี้เพื่อให้ paths มีจุดเริ่มต้นที่ root ของโปรเจกต์
+    // "paths": {
+    //   "#ui/*": ["path/to/ui/types/*"] // กำหนด path alias ตรงนี้
+    // }
+  }
 }
