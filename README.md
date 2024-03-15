@@ -11,19 +11,19 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 - [x] ✨ Eslint & lint
 
 ## Setup
-
+Pre requirement pnpm https://pnpm.io/installation
 To install the dependencies:
 
 ````bash
 # npm
-npm install
+pnpm install
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on http://localhost:3002
 
 ```bash
-npm run dev
+pnpm run dev
 ````
 
 ## Production
@@ -31,13 +31,18 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Locally preview production build:
 
 ```bash
-npm start
+pnpm start
 ```
 
 # nuxt3 with UI pro
+
+# Keycloak config
+https://iam-dev.pointit.co.th/
+Valid post logout redirect URIs
+http://localhost:3002/*

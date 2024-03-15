@@ -13,5 +13,7 @@ export default {
   signOut: 'Sign Out',
   copyright: 'Copyright © 2024 Point IT Consulting co.,ltd',
   // Live
-  live: 'LIVE'
+  live: 'LIVE',
+    // Map
+  map: 'Map'
 }

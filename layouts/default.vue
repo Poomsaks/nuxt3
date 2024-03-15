@@ -15,6 +15,17 @@ const links = [
   //   }
   // },
   {
+    id: 'map',
+    label: 'Map',
+    icon: 'i-heroicons-chat-bubble-oval-left-ellipsis',
+    to: '/map',
+    badge: '4',
+    tooltip: {
+      text: 'Map',
+      shortcuts: ['G', 'Ma']
+    }
+  },
+  {
     id: 'messaging',
     label: 'Messaging',
     icon: 'i-heroicons-chat-bubble-oval-left-ellipsis',
@@ -22,7 +33,7 @@ const links = [
     badge: '4',
     tooltip: {
       text: 'Messaging',
-      shortcuts: ['G', 'M']
+      shortcuts: ['G', 'Me']
     }
   },
   {
@@ -33,7 +44,7 @@ const links = [
     badge: '4',
     tooltip: {
       text: 'Live',
-      shortcuts: ['G', 'L']
+      shortcuts: ['G', 'Li']
     }
   },
   // {
@@ -68,7 +79,7 @@ const links = [
     ],
     tooltip: {
       text: 'Settings',
-      shortcuts: ['G', 'S']
+      shortcuts: ['G', 'St']
     }
   }
 ]

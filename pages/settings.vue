@@ -210,7 +210,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
           color="red"
           label="Delete account"
           size="md"
-          @click="isDeleteAccountModalOpen.value = true"
+          @click="isDeleteAccountModalOpen = true"
         />
       </div>
     </UDashboardSection>

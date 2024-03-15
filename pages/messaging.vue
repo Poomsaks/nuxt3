@@ -39,7 +39,7 @@ const items = [
               color="gray"
               variant="ghost"
               square
-              @click="isNotificationsSlideoverOpen.value = true"
+              @click="isNotificationsSlideoverOpen = true"
             >
               <UChip color="red" inset>
                 <UIcon name="i-heroicons-bell" class="w-5 h-5" />

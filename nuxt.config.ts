@@ -11,7 +11,8 @@ export default defineNuxtConfig({
       apiUrl: process.env.API_URL,
       keycloakUrl: process.env.KEYCLOAK_ISSUER,
       keycloakRealm: process.env.KEYCLOAK_REALM,
-      keycloakClientId: process.env.KEYCLOAK_ID
+      keycloakClientId: process.env.KEYCLOAK_ID,
+      googleMapToken: process.env.GOOGLE_MAP_TOKEN
     },
     // Private runtime config (server side only)
     private: {
@@ -29,9 +30,10 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss'
   ],
-  // plugins: [
-  //   '~/plugins/keycloak.js'
-  // ],
+  plugins: [
+    '~/plugins/keycloak.js',
+    '~/plugins/google-maps.js'
+  ],
   eslint: {
     fix: true // Make sure this is set to true
   },
