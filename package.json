@@ -3,14 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "build": "nuxi build",
+    "dev": "nuxi dev --dotenv .env",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore --fix .",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxi typecheck"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
