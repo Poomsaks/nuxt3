@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
   plugins: [
-    '~/plugins/keycloak.js',
+    '~/plugins/keycloak.client.js',
     '~/plugins/google-maps.js'
   ],
   eslint: {

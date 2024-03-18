@@ -1,5 +1,6 @@
 // plugins/keycloak.js
-import { defineNuxtPlugin, useRuntimeConfig, navigateTo } from '#app'
+// import { defineNuxtPlugin, useRuntimeConfig, navigateTo } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import Keycloak from 'keycloak-js'
 
 function getRelativeRoute(route) {
@@ -23,7 +24,7 @@ export default defineNuxtPlugin(nuxtApp => {
       })
       .then(authenticated => {
         if (authenticated) {
-          navigateTo('/live')
+          // navigateTo('/live')
         }
         console.log('Authenticated:', authenticated)
       })
@@ -35,3 +36,4 @@ export default defineNuxtPlugin(nuxtApp => {
     nuxtApp.provide('keycloak', keycloak)
   }
 })
+

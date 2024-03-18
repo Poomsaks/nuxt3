@@ -1,11 +1,10 @@
-<script setup lang="ts">
-// import { sub } from 'date-fns'
-// import type { Period, Range } from '~/types'
-definePageMeta({
-  middleware: ['auth']
-})
+<!-- C:\Users\Aliza\.apps\nuxtjs3\pages\messaging.vue -->
+<script setup lang="js">
+import { useNuxtApp } from '#app'
+// const router = useRouter()
+const { $keycloak } = useNuxtApp()
 const { isNotificationsSlideoverOpen } = useDashboard()
-
+// console.log('🚀 ~ file: messaging.vue  line:10 ~ keycloak', $keycloak)
 const items = [
   [
     {
@@ -69,10 +68,10 @@ const items = [
       <UContainer>
         <iframe
           class="responsive-iframe"
-          src="https://messaging.pointit.co.th"
+          :src="`https://messaging.pointit.co.th/?token=${$keycloak.token}`"
           title="Messaging"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; microphone; camera"
           allowfullscreen
         />
         <!-- <canvas
