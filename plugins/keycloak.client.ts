@@ -1,9 +1,9 @@
-// plugins/keycloak.js
+// plugins/keycloak.ts
 // import { defineNuxtPlugin, useRuntimeConfig, navigateTo } from '#app'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import Keycloak from 'keycloak-js'
 
-function getRelativeRoute(route) {
+function getRelativeRoute(route: string) {
   return `${window.location.origin}/${route}`
 }
 

@@ -1,9 +1,9 @@
 module.exports = {
   root: true,
-  // parser: 'vue-eslint-parser',
-  // parserOptions: {
-  //   parser: '@typescript-eslint/parser'
-  // },
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
+  },
   extends: ['@nuxt/eslint-config'],
   rules: {
     // Global
@@ -26,13 +26,5 @@ module.exports = {
       }
     ],
     'vue/no-v-html': 0
-  },
-  overrides: [
-    {
-      files: ['*.vue'],
-      rules: {
-        // กฎเฉพาะสำหรับไฟล์ Vue
-      }
-    }
-  ]
+  }
 }

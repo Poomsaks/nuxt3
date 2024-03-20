@@ -17,7 +17,7 @@ const links = [
   {
     id: 'map',
     label: 'Map',
-    icon: 'i-heroicons-chat-bubble-oval-left-ellipsis',
+    icon: 'i-heroicons-map',
     to: '/map',
     badge: '4',
     tooltip: {
@@ -34,6 +34,17 @@ const links = [
     tooltip: {
       text: 'Messaging',
       shortcuts: ['G', 'Me']
+    }
+  },
+  {
+    id: 'citylaw',
+    label: 'Citylaw',
+    icon: 'i-simple-icons-accusoft',
+    to: '/Citylaw',
+    badge: '4',
+    tooltip: {
+      text: 'Citylaw'
+      // shortcuts: ['G', 'Li']
     }
   },
   {
@@ -66,6 +77,11 @@ const links = [
       {
         label: 'General',
         to: '/settings',
+        exact: true
+      },
+      {
+        label: 'Devices',
+        to: '/settings/devices',
         exact: true
       }
       // {

@@ -2,10 +2,7 @@
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { DatePicker as VCalendarDatePicker } from 'v-calendar'
 // @ts-ignore
-import type {
-  DatePickerDate,
-  DatePickerRangeObject
-} from 'v-calendar/dist/types/src/use/datePicker'
+import type { DatePickerDate, DatePickerRangeObject } from 'v-calendar/dist/types/src/use/datePicker'
 import 'v-calendar/dist/style.css'
 
 defineOptions({
@@ -14,9 +11,7 @@ defineOptions({
 
 const props = defineProps({
   modelValue: {
-    type: [Date, Object] as PropType<
-      DatePickerDate | DatePickerRangeObject | null
-    >,
+    type: [Date, Object] as PropType<DatePickerDate | DatePickerRangeObject | null>,
     default: null
   }
 })
@@ -45,13 +40,7 @@ const attrs = {
 </script>
 
 <template>
-  <VCalendarDatePicker
-    v-if="date && (date as DatePickerRangeObject)?.start && (date as DatePickerRangeObject)?.end"
-    v-model.range="date"
-    :columns="smallerThanSm ? 1 : 2"
-    :rows="smallerThanSm ? 2 : 1"
-    v-bind="{ ...attrs, ...$attrs }"
-  />
+  <VCalendarDatePicker v-if="date && (date as DatePickerRangeObject)?.start && (date as DatePickerRangeObject)?.end" v-model.range="date" :columns="smallerThanSm ? 1 : 2" :rows="smallerThanSm ? 2 : 1" v-bind="{ ...attrs, ...$attrs }" />
   <VCalendarDatePicker v-else v-model="date" v-bind="{ ...attrs, ...$attrs }" />
 </template>
 

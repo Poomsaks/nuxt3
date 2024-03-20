@@ -1,9 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
   devServer: {
     host: '0.0.0.0',
     port: 3002
+  },
+  typescript: {
+    typeCheck: true
   },
   runtimeConfig: {
     // Public runtime config
@@ -31,8 +35,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
   plugins: [
-    '~/plugins/keycloak.client.js',
-    '~/plugins/google-maps.js'
+    '~/plugins/keycloak.client.ts'
   ],
   eslint: {
     fix: true // Make sure this is set to true

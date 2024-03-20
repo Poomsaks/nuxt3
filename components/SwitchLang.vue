@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useProfileStore } from '@/stores/profile' // Adjust the path as necessary
+import { useProfileStore } from '@/stores/auth/profile' // Adjust the path as necessary
 
 const profileStore = useProfileStore()
 
 // const displayName = profileStore.name
 
 const selectLang = () => {
-  const newLocale = profileStore.currentLocale === 'th' ? 'en' : 'th'
+  const newLocale = profileStore.locale === 'th' ? 'en' : 'th'
   profileStore.setLocale(newLocale)
 }
 </script>
@@ -15,7 +15,7 @@ const selectLang = () => {
   <UContainer>
     <UButton variant="ghost" @click="selectLang">
       <img
-        v-if="profileStore.currentLocale === 'th'"
+        v-if="profileStore.locale === 'th'"
         src="~/assets/images/thai.webp"
         width="24"
         height="24"

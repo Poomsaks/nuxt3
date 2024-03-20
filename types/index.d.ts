@@ -52,6 +52,11 @@ export interface ColorOption {
 }
 
 export interface KeycloakInstance {
-  logout: () => void;
+  logout: () => void
   // กำหนดเมธอดอื่นๆ ที่คุณต้องการใช้
+}
+
+export interface AuthState {
+  isAuthenticated: boolean
+  user: User | null // Assuming `User` is the type you want to associate with the authenticated state.
 }
