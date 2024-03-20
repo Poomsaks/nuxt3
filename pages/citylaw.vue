@@ -27,7 +27,7 @@ const items = [
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar :title="$t('live')">
+      <UDashboardNavbar :title="$t('Citylow')">
         <template #right>
           <SwitchLang />
           <UTooltip text="Notifications" :shortcuts="['N']">

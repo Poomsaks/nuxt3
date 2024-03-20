@@ -60,3 +60,13 @@ export interface AuthState {
   isAuthenticated: boolean
   user: User | null // Assuming `User` is the type you want to associate with the authenticated state.
 }
+
+// types/index.d.ts (or you can define it directly in your store file for simplicity)
+
+export interface UserData {
+  id: string
+  username: string
+  email: string
+  firstName: string,
+  lastName: string
+}

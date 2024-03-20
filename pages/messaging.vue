@@ -2,7 +2,10 @@
 <script setup lang="js">
 import { useNuxtApp } from '#app'
 // const router = useRouter()
-const { $keycloak } = useNuxtApp()
+onMounted(() => {
+  useNuxtApp()
+})
+
 const { isNotificationsSlideoverOpen } = useDashboard()
 // console.log('🚀 ~ file: messaging.vue  line:10 ~ keycloak', $keycloak)
 const items = [
@@ -30,7 +33,7 @@ const items = [
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar :title="$t('live')">
+      <UDashboardNavbar :title="$t('Messging')">
         <template #right>
           <SwitchLang />
           <UTooltip text="Notifications" :shortcuts="['N']">

@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { Loader } from '@googlemaps/js-api-loader'
 
 onMounted(() => {
-  console.log(process.env.GOOGLE_MAP_TOKEN)
+  // console.log(process.env.GOOGLE_MAP_TOKEN)
   const loader = new Loader({
     apiKey: 'AIzaSyA1SMMwO1D8SoAQe_7nZs8W8V0Oox4rN_0', // Make sure you have defined this environment variable
     version: 'weekly'
