@@ -2,6 +2,11 @@
 import { onMounted } from 'vue'
 import { Loader } from '@googlemaps/js-api-loader'
 
+definePageMeta({
+  middleware: ['auth']
+  // or middleware: 'auth'
+})
+
 onMounted(() => {
   // console.log(process.env.GOOGLE_MAP_TOKEN)
   const loader = new Loader({

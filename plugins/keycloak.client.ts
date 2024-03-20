@@ -1,8 +1,9 @@
-// plugins/keycloak.ts
+// plugins/keycloak.client.ts
 
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig, navigateTo } from '#app'
 import Keycloak from 'keycloak-js'
 import { useAuthStore } from '../stores/auth' // ตั้งค่าตามที่อยู่ของไฟล์ store ของคุณ
+import { useStateStore } from '../stores/auth/state' // ตั้งค่าตามที่อยู่ของไฟล์ store ของคุณ
 
 
 function getRelativeRoute(route: string) {
@@ -41,6 +42,7 @@ export default defineNuxtPlugin({
         .then(authenticated => {
           if (authenticated) {
             const authStore = useAuthStore()
+            const authState = useStateStore()
             authStore.setAuthenticated(authenticated)
             const tokenPayload = parseJwt(keycloak.token)
             // Assuming you're getting the user details from the Keycloak token or profile
@@ -57,6 +59,7 @@ export default defineNuxtPlugin({
                 // groups: profile.userProfileMetadata.groups as Array
               }
               authStore.setUser(userData)
+              navigateTo(authState.currentRoute)
               console.log('🚀 ~ file: keycloak.client.ts  line:60 ~ tokenPayload', tokenPayload)
               console.log('🚀 ~ file: keycloak.client.ts  line:61 ~ keycloak', keycloak)
             }).catch(err => {

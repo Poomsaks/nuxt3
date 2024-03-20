@@ -15,5 +15,7 @@ export default {
   // Live
   live: 'LIVE',
     // Map
-  map: 'Map'
+  map: 'Map',
+  // Messging
+  messging: 'Messging'
 }

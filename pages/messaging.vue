@@ -1,6 +1,11 @@
 <!-- C:\Users\Aliza\.apps\nuxtjs3\pages\messaging.vue -->
 <script setup lang="js">
 import { useNuxtApp } from '#app'
+
+definePageMeta({
+  middleware: ['auth']
+  // or middleware: 'auth'
+})
 // const router = useRouter()
 onMounted(() => {
   useNuxtApp()
@@ -33,7 +38,7 @@ const items = [
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar :title="$t('Messging')">
+      <UDashboardNavbar :title="$t('messging')">
         <template #right>
           <SwitchLang />
           <UTooltip text="Notifications" :shortcuts="['N']">

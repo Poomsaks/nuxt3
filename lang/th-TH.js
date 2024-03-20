@@ -15,5 +15,7 @@ export default {
   // Live
   live: 'ระบบภาพสด',
     // Map
-  map: 'ระบบแผนที่'
+  map: 'ระบบแผนที่',
+  // Messging
+  messging: 'ระบบการส่งข้อความ'
 }
