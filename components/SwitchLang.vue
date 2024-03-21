@@ -15,22 +15,21 @@ const selectLang = () => {
 </script>
 
 <template>
-  <UContainer>
-    <UButton variant="ghost" @click="selectLang">
-      <img
-        v-if="useState.locale === 'th'"
-        src="~/assets/images/thai.webp"
-        width="24"
-        height="24"
-      >
-      <img
-        v-else
-        lazy-src="~/assets/images/greatBritain.webp"
-        src="~/assets/images/greatBritain.webp"
-        width="24"
-        height="24"
-      >
-    </UButton>
-    <!-- {{ displayName }} -->
-  </UContainer>
+  <UButton variant="ghost" @click="selectLang">
+    <img
+      v-if="useState.locale === 'th'"
+      src="~/assets/images/thai.webp"
+      width="20"
+      height="20"
+    >
+    <img
+      v-else
+      lazy-src="~/assets/images/greatBritain.webp"
+      src="~/assets/images/greatBritain.webp"
+      width="20"
+      height="20"
+    >
+  </UButton>
+
+  <!-- {{ displayName }} -->
 </template>

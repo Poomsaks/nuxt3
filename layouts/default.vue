@@ -215,10 +215,10 @@ const colors = computed(() =>
 
         <UDivider />
 
-        <UDashboardSidebarLinks
+        <!-- <UDashboardSidebarLinks
           :links="[{ label: 'Colors', draggable: true, children: colors }]"
           @update:links="colors => (defaultColors = colors)"
-        />
+        /> -->
 
         <div class="flex-1" />
 
