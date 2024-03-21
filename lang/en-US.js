@@ -12,6 +12,8 @@ export default {
   signIn: 'Sign in',
   signOut: 'Sign Out',
   copyright: 'Copyright © 2024 Point IT Consulting co.,ltd',
+  // Citylaw
+  citylaw: 'Citylaw',
   // Live
   live: 'LIVE',
     // Map

@@ -30,7 +30,7 @@ const items = [
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar :title="$t('Citylow')">
+      <UDashboardNavbar :title="$t('citylaw')">
         <template #right>
           <SwitchLang />
           <UTooltip text="Notifications" :shortcuts="['N']">

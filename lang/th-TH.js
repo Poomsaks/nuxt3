@@ -12,6 +12,8 @@ export default {
   signIn: 'เข้าสู่ระบบ',
   signOut: 'ออกจากะบบ',
   copyright: 'ลิขสิทธิ์ © 2567 พอยท์ ไอที คอนซัลทิ่ง จำกัด',
+  // Citylaw
+  citylaw: 'ระบบงานเทศกิจ',
   // Live
   live: 'ระบบภาพสด',
     // Map

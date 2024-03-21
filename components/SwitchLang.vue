@@ -1,3 +1,4 @@
+<!-- components/SwitchLang.vue -->
 <script setup lang="ts">
 import { useStateStore } from '@/stores/auth/state' // Adjust the path as necessary
 
@@ -8,6 +9,8 @@ const useState = useStateStore()
 const selectLang = () => {
   const newLocale = useState.locale === 'th' ? 'en' : 'th'
   useState.setLocale(newLocale)
+  // บันทึกการตั้งค่าภาษาไปยัง localStorage
+  localStorage.setItem('locale', newLocale)
 }
 </script>
 
@@ -31,4 +34,3 @@ const selectLang = () => {
     <!-- {{ displayName }} -->
   </UContainer>
 </template>
-~/stores/auth/state

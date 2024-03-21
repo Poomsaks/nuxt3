@@ -1,8 +1,26 @@
+<!-- layouts/default.vue -->
 <script setup lang="ts">
+
+import { useStateStore } from '../stores/auth/state'
 const route = useRoute()
 const appConfig = useAppConfig()
 const { isHelpSlideoverOpen } = useDashboard()
+const { locale, setLocale } = useI18n()
+const authState = useStateStore()
 
+onMounted(() => {
+  const savedLocale = authState.locale
+  if (savedLocale) {
+    setLocale(savedLocale)
+  }
+})
+
+watch(() => authState.locale, (newLocale) => {
+  setLocale(newLocale)
+})
+console.log('🚀 ~ file: default.vue layout line:7 ~ locale', locale)
+// console.log('🚀 ~ file: default.vue layout line:8 ~ locales', locales)
+console.log('🚀 ~ file: default.vue layout line:9 ~ authState', authState.locale)
 const links = [
   // {
   //   id: 'home',

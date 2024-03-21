@@ -6,9 +6,6 @@ export default defineNuxtConfig({
     host: '0.0.0.0',
     port: 3002
   },
-  typescript: {
-    typeCheck: true
-  },
   runtimeConfig: {
     // Public runtime config
     public: {
@@ -26,13 +23,14 @@ export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   modules: [
     '@nuxtjs/eslint-module',
-    '@nuxtjs/i18n',
     '@nuxtjs/fontaine',
+    '@nuxtjs/i18n',
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon'
   ],
   plugins: [
     '~/plugins/keycloak.client.ts'
@@ -64,24 +62,4 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: '~/i18n.config.ts' // if you are using custom path, default
   }
-  // auth: {
-  //   // กำหนด strategies สำหรับ Keycloak
-  //   strategies: {
-  //     keycloak: {
-  //       scheme: 'oauth2',
-  //       endpoints: {
-  //         authorization: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/auth',
-  //         token: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/token',
-  //         userInfo: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/userinfo',
-  //         logout: process.env.KEYCLOAK_ISSUER + '/' + process.env.KEYCLOAK_REAM + '/protocol/openid-connect/logout?redirect_uri=' + encodeURIComponent('https://bma-dev.pointit.co.th')
-  //       },
-  //       clientId: 'nuxtjs3',
-  //       scope: ['openid', 'profile', 'email'],
-  //       responseType: 'code',
-  //       grantType: 'authorization_code',
-  //       redirectUri: 'https://bma-dev.pointit.co.th',
-  //       logoutRedirectUri: 'https://bma-dev.pointit.co.th/live'
-  //     }
-  //   }
-  // }
 })

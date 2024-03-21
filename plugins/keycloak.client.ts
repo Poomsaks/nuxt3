@@ -59,9 +59,11 @@ export default defineNuxtPlugin({
                 // groups: profile.userProfileMetadata.groups as Array
               }
               authStore.setUser(userData)
-              navigateTo(authState.currentRoute)
+              navigateTo('/live')
+              // navigateTo(authState.currentRoute)
               console.log('🚀 ~ file: keycloak.client.ts  line:60 ~ tokenPayload', tokenPayload)
               console.log('🚀 ~ file: keycloak.client.ts  line:61 ~ keycloak', keycloak)
+              console.log('🚀 ~ file: keycloak.client.ts  line:62 ~ authState', authState)
             }).catch(err => {
               console.error('Failed to load user profile', err)
             })

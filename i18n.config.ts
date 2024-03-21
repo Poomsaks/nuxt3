@@ -6,7 +6,7 @@ export default defineI18nConfig(() => {
   return {
     legacy: false,
     lazy: true,
-    locale: 'en',
+    locale: 'th',
     messages: {
       en,
       th
