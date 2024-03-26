@@ -1,0 +1,11 @@
+# ไฟล์และโฟลเดอร์ที่ไม่ต้องการคัดลอก
+node_modules
+.nuxt
+.output
+.git
+.gitignore
+.dockerignore
+package-lock.json
+README.md
+Dockerfile
+docker-compose.yaml

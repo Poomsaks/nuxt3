@@ -1,0 +1,7 @@
+services:
+  nuxtjs3:
+    container_name: nuxt-app3
+    image: reg.pointit.co.th/bma:0.0.1 
+    # command: ["sleep", "600s"]
+    ports:
+      - "3000:3000"
