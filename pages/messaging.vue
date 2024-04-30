@@ -2,10 +2,10 @@
 <script setup lang="js">
 import { useNuxtApp } from '#app'
 
-definePageMeta({
-  middleware: ['auth']
-  // or middleware: 'auth'
-})
+// definePageMeta({
+//   middleware: ['auth']
+//   // or middleware: 'auth'
+// })
 // const router = useRouter()
 onMounted(() => {
   useNuxtApp()

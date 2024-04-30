@@ -1,8 +1,8 @@
 <script setup lang="ts">
-definePageMeta({
-  middleware: ['auth']
-  // or middleware: 'auth'
-})
+// definePageMeta({
+//   middleware: ['auth']
+//   // or middleware: 'auth'
+// })
 const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [

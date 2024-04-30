@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
-definePageMeta({
-  middleware: ['auth']
-  // or middleware: 'auth'
-})
+// definePageMeta({
+//   middleware: ['auth']
+//   // or middleware: 'auth'
+// })
 
 const fileRef = ref<{ input: HTMLInputElement }>()
 const isDeleteAccountModalOpen = ref(false)

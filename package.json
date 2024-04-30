@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
+    "@googlemaps/markerclusterer": "^2.5.3",
     "@iconify-json/heroicons": "^1.1.20",
     "@iconify-json/simple-icons": "^1.1.96",
     "@nuxt/fonts": "^0.4.0",
@@ -36,6 +37,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/google.maps": "^3.55.7",
     "@typescript-eslint/typescript-estree": "^7.3.1",
     "eslint": "^8.57.0",
     "typescript": "^5.4.3",

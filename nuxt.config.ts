@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     'nuxt-icon'
   ],
   plugins: [
-    '~/plugins/keycloak.client.ts'
+    // '~/plugins/keycloak.client.ts'
   ],
   eslint: {
     fix: true // Make sure this is set to true
